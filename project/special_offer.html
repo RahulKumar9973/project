@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+        .special-offers {
+  padding: 20px;
+  background-color:aquamarine;
+}
+
+.special-offers h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.offer {
+  background-color:blueviolet;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.offer h3 {
+  margin-top: 0;
+}
+
+.offer p {
+  margin-bottom: 0;
+}
+
+.offer .validity {
+  font-style: italic;
+  color:cornflowerblue;
+}
+footer {
+      background-color: #333;
+      color: #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+      font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+          <a href="#">Hotel Royal</a>
+          <img class="dats" src="hotel_logo.jpg" alt="" width="85px" height="85px" style=" float: left;">
+        </h1>
+        <nav>
+          <a href="new_1.html">Home</a> |
+          <a href="service.html">Services</a> |
+          <a href="gallary.html">Gallery</a> |
+          <a href="special_offer.html">Special Offer</a> |
+          <a href="contact.html">Contact</a>|
+          <a href="About us">About us</a>
+        </nav>
+      </header>
+    <section class="special-offers">
+        <h2>Special Offers</h2>
+        <div id="offer-list"></div>
+      </section>
+      <script>
+        const specialOffers = [
+  {
+    title: "Summer Discount",
+    description: "Enjoy 20% off on all room bookings this summer!",
+    validity: "Valid until August 31, 2023"
+  },
+  {
+    title: "Weekend Getaway",
+    description: "Book a weekend stay and get a complimentary breakfast.",
+    validity: "Valid on weekends until December 31, 2023"
+  },
+  {
+    title: "Last Minute Deal",
+    description: "Save 30% on bookings made within 24 hours of check-in.",
+    validity: "Valid for immediate bookings"
+  }
+];
+function displaySpecialOffers() {
+  const offerList = document.getElementById("offer-list");
+
+  specialOffers.forEach(function(offer) {
+    const offerDiv = document.createElement("div");
+    offerDiv.classList.add("offer");
+
+    const title = document.createElement("h3");
+    title.textContent = offer.title;
+    offerDiv.appendChild(title);
+
+    const description = document.createElement("p");
+    description.textContent = offer.description;
+    offerDiv.appendChild(description);
+
+    const validity = document.createElement("p");
+    validity.classList.add("validity");
+    validity.textContent = offer.validity;
+    offerDiv.appendChild(validity);
+
+    offerList.appendChild(offerDiv);
+  });
+}
+displaySpecialOffers();
+      </script>
+      <footer>
+        <h5>About Hotel Royal</h5>
+        <p>
+          Hotel Royal is a luxurious hotel located in the heart of the city. We offer world-class amenities, exceptional service, and a memorable experience for our guests. With beautifully designed rooms, a fine dining restaurant, a spa, and a rooftop pool, we strive to provide the utmost comfort and relaxation during your stay. Our dedicated staff is always ready to assist you and ensure that your visit is nothing short of perfection.
+        </p>
+        <p class="para">
+          contact details: <br>
+          TELEFONE NO.: 05121249345753 <br>
+          SUMAN KUMAR : 5854654545 <br>
+          DEEPAK SONI: 8103649044 <br>
+          RAHUL KUMAR: 7878788787 <br>
+          TUSHAR DOGRA: 898944875 <br>
+          gmail: "HotelROYAL09@gmail.com"
+        </p>
+      </footer>
+    </body>
+    
+</body>
+</html>
